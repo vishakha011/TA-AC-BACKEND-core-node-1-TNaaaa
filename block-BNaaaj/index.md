@@ -10,8 +10,8 @@ Q. In above `index.js` file
 Q. Create 2 files
   1. area.js
   2. app.js
-  3. In area.js write functions to calculate area of square, rectangle and circle and export them using module.exports
-  4. In app.js, require functions from area.js and execute the areas of given figures and console.log the results.
+  3. In area.js write functions to calculate area of square, rectangle and circle and exportts
+  4. In app.js, require functions from area.js and execute the areas of given figures and console.log the results. them using module.expor
 
 Q. Write 2 different methods for creating buffer in nodejs using Buffer class.
 - create a fixed length buffer of 12.
