@@ -38,6 +38,10 @@ function handleRequest(req, res) {
     else if(['jpg', 'png', 'svg'].includes(extensionName)) {
         fs.createReadStream('.' + req.url).pipe(res)
     }
+    else {
+        res.writeHead(404, {'Content-Type': 'text/html'});
+        res.end('<h2>Page Not Found</h2>')
+    }
 }
 
 server.listen(3000, 'localhost',  () => {
