@@ -11,23 +11,23 @@ function handleRequest(req, res) {
     var parsedUrl = url.parse(req.url);
     var pathname = parsedUrl.pathname;
 
-    if(req.method === "GET" && pathname === "/") {
+    if(req.method === "GET" && pathname === "/" || pathname === "/index.html") {
         res.setHeader('Content-Type', 'text/html');
         fs.createReadStream('./index.html').pipe(res);
     }
-    else if(req.method === "GET" && pathname === "/register") {
+    else if(req.method === "GET" && pathname === "/register" || pathname === "/register.html") {
         res.setHeader('Content-Type', 'text/html');
         fs.createReadStream('./register.html').pipe(res);
     }
-    else if(req.method === "GET" && pathname === "/schedule") {
+    else if(req.method === "GET" && pathname === "/schedule" || pathname === "/schedule.html") {
         res.setHeader('Content-Type', 'text/html');
         fs.createReadStream('./schedule.html').pipe(res);
     }
-    else if(req.method === "GET" && pathname === "/speakers") {
+    else if(req.method === "GET" && pathname === "/speakers" || pathname === "/speakers.html") {
         res.setHeader('Content-Type', 'text/html');
         fs.createReadStream('./speakers.html').pipe(res);
     }
-    else if(req.method === "GET" && pathname === "/venue") {
+    else if(req.method === "GET" && pathname === "/venue" || pathname === "/venue.html") {
         res.setHeader('Content-Type', 'text/html');
         fs.createReadStream('./venue.html').pipe(res);
     }
